@@ -1,6 +1,12 @@
 function formatMessage(message, maxLength) {
-const word= message.slice(0, maxLength);
-return word+"...";
+  if (message.length > maxLength) {
+    const word = message.slice(0, maxLength);
+
+    return word + "...";
+  } else {
+    const word = message.slice(0, maxLength);
+    return word;
+  }
 }
 
 console.log(formatMessage("Curabitur ligula sapien", 16)); // "Curabitur ligula..."

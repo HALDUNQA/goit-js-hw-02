@@ -1,15 +1,12 @@
-
 function checkForSpam(message) {
-const newMessage= message.toLowerCase();
-// CALISMAYAN TERNARY
-// return newMessage.includes( 'sale' || 'spam')? true : false;
+  const newMessage = message.toLowerCase();
+  // CALISMAYAN TERNARY
+  // return newMessage.includes( 'sale' || 'spam')? true : false;
 
-const sale= newMessage.includes('sale');
-const spam= newMessage.includes('spam');
+  const sale = newMessage.includes("sale");
+  const spam = newMessage.includes("spam");
 
-return sale || spam ? true : false;
-
-
+  return sale || spam ? true : false;
 }
 console.log(checkForSpam("Latest technology news")); // false
 console.log(checkForSpam("JavaScript weekly newsletter")); // false
